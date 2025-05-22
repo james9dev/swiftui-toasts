@@ -25,7 +25,9 @@ struct ContentView: View {
         Button("Show Toast") {
           let toast = ToastValue(
             icon: Image(systemName: "bell"),
-            message: "typed message: \(message)"
+            message: "typed message: \(message)",
+            duration: 1.2
+                
           )
           presentToast(toast)
         }
