@@ -9,7 +9,7 @@ internal struct ToastView: View {
   var body: some View {
     main
       ._background {
-        Capsule().fill(Color.toastBackground)
+        Capsule().fill(Color.toastBackgroundDark)
       }
       .id(model.message)
       .frame(height: 48)
@@ -28,6 +28,7 @@ internal struct ToastView: View {
           .frame(width: 14)
       }
       Text(model.message)
+        .foregroundColor(Color.toastTextWhite)
         .lineLimit(1)
         .truncationMode(.tail)
       if let button = model.button {
